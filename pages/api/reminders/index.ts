@@ -1,11 +1,11 @@
-import { createUser, getUsers } from "@/lib/prisma/users";
+import { createReminder, getReminders } from "@/lib/prisma/reminders";
 import { NextApiRequest, NextApiResponse } from "next";
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     try {
-      const { users, error } = await getUsers();
+      const { reminders, error } = await getReminders();
       if (error) throw new Error(`${error}`);
-      return res.status(200).json({ users });
+      return res.status(200).json({ reminders });
     } catch (error: any) {
       return res.status(500).json({ error: `${error.message}` });
     }
@@ -13,9 +13,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     try {
       const data = req.body;
-      const { user, error } = await createUser(data);
+      const { reminder, error } = await createReminder(JSON.parse(data));
       if (error) throw new Error(`${error}`);
-      return res.status(200).json({ user });
+      return res.status(200).json({ reminder });
     } catch (error: any) {
       return res.status(500).json({ error: error.message });
     }

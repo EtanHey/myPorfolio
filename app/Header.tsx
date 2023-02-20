@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="bg-stone-100 py-12">
+    <header className="bg-stone-100 py-4">
       <nav className="center">
         <ul className="flex justify-center gap-8">
           <li>
@@ -20,6 +20,14 @@ function Header() {
               className="text-sm font-medium uppercase text-stone-500"
             >
               Users
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/reminders"
+              className="text-sm font-medium uppercase text-stone-500"
+            >
+              Reminders
             </Link>
           </li>
         </ul>
