@@ -1,5 +1,4 @@
 import { Reminder } from "@prisma/client";
-import Error from "next/error";
 import prisma from ".";
 
 export async function getReminders() {

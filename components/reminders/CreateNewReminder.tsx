@@ -1,5 +1,4 @@
 "use client";
-import { createReminder } from "@/lib/prisma/reminders";
 import { useRouter } from "next/navigation";
 import React, { BaseSyntheticEvent } from "react";
 
@@ -18,10 +17,14 @@ const CreateNewReminder = () => {
           content,
           time,
         };
-        const response = await fetch("http://localhost:3000/api/reminders", {
-          method: "POST",
-          body: JSON.stringify(newReminder),
-        });
+        const response = await fetch(
+          "http://localhost:3000/reminders/controls",
+          {
+            method: "POST",
+            body: JSON.stringify({ newReminder }),
+          }
+        );
+
         const { reminder, error } = await response.json();
         if (error) throw new Error(`${error}`);
         if (reminder) {
