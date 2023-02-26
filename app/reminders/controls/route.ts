@@ -3,8 +3,6 @@ import { NextRequest} from "next/server";
 
 export async function GET() {
   try {
-    console.log("here");
-
     const { reminders, error } = await getReminders();
     if (error) throw new Error(`${error}`);
     return new Response(JSON.stringify(reminders), {
