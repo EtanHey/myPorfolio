@@ -12,7 +12,7 @@ const Users = async () => {
       <SidebarListContainer>
         {users
           ? users?.map((user: User) => (
-              <li key={user.id}>
+              <li className="" key={user.id}>
                 <Link href={`/users/${user.id}`}>
                   {user.firstName} {user.lastName}
                 </Link>
