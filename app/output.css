@@ -438,7 +438,8 @@ body {
 
 main {
   flex: 1 1 0%;
-  background-color: rgb(0 0 0 / 0.3);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .section {
@@ -604,10 +605,6 @@ main {
   margin-bottom: 0.75rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .inline-block {
   display: inline-block;
 }
@@ -722,16 +719,18 @@ main {
   border-color: rgb(168 162 158 / var(--tw-border-opacity));
 }
 
-.border-stone-400\/30 {
-  border-color: rgb(168 162 158 / 0.3);
-}
-
-.bg-blue-500\/30 {
-  background-color: rgb(59 130 246 / 0.3);
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-inherit {
   background-color: inherit;
+}
+
+.bg-purple-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 51 234 / var(--tw-bg-opacity));
 }
 
 .bg-stone-300 {
@@ -743,14 +742,6 @@ main {
   background-color: rgb(214 211 209 / 0.3);
 }
 
-.bg-stone-800\/70 {
-  background-color: rgb(41 37 36 / 0.7);
-}
-
-.bg-white\/50 {
-  background-color: rgb(255 255 255 / 0.5);
-}
-
 .bg-stone-800\/30 {
   background-color: rgb(41 37 36 / 0.3);
 }
@@ -759,21 +750,24 @@ main {
   background-color: rgb(255 255 255 / 0.3);
 }
 
-.bg-black\/30 {
-  background-color: rgb(0 0 0 / 0.3);
-}
-
-.bg-black {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-purple-400\/30 {
-  background-color: rgb(192 132 252 / 0.3);
+.bg-stone-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 37 36 / var(--tw-bg-opacity));
 }
 
-.bg-purple-600\/30 {
-  background-color: rgb(147 51 234 / 0.3);
+.bg-stone-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(87 83 78 / var(--tw-bg-opacity));
+}
+
+.bg-stone-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 162 158 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -866,6 +860,11 @@ main {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -902,7 +901,7 @@ main {
   }
 
   50% {
-    scale: 1 1.5
+    scale: 1 1.5;
   }
 
   to {
