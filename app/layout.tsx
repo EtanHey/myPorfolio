@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Footer from "./Footer";
 import Header from "./Header";
 import "./output.css";
+import { MouseOverlay } from "@/components/overlays";
 
 export const metadata: Metadata = {
   title: "Etan Heyman`n Portfolio",
@@ -15,10 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className="scrollbar-none bg-black">
+        <MouseOverlay>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </MouseOverlay>
       </body>
     </html>
   );

@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        rotate: 'rotate 10s ease-in-out infinite',
+      }
+    },
   },
   plugins: [],
 }

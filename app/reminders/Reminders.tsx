@@ -12,7 +12,7 @@ const Reminders = async () => {
       <SidebarListContainer>
         {reminders
           ? reminders?.map((reminder: Reminder) => (
-              <li key={reminder.id}>
+              <li className="" key={reminder.id}>
                 <Link href={`/reminders/${reminder.id}`}>{reminder.name}</Link>
               </li>
             ))

@@ -3,13 +3,13 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="bg-stone-100 py-4">
+    <header className="w-full h-fit py-4 bg-purple-600/30">
       <nav className="center">
         <ul className="flex justify-center gap-8">
-          <li>
+          <li className="">
             <Link
               href="/"
-              className="text-sm font-medium uppercase text-stone-500"
+              className=" text-sm font-medium uppercase text-stone-500"
             >
               Home
             </Link>

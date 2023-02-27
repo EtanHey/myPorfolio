@@ -41,7 +41,7 @@ const CreateNewReminder = () => {
       onSubmit={(ev) => {
         handleCreateNewReminder(ev);
       }}
-      className="flex flex-col gap-4 rounded-lg border-2 border-stone-400 bg-stone-300 p-4"
+      className="flex flex-col gap-4 rounded-lg border-2 border-stone-400 bg-stone-300/30 p-4"
     >
       <label htmlFor="name">Name:</label>
       <input className="shadow-md" type="text" id="name" name="name" />
