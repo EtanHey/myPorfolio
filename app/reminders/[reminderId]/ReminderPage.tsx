@@ -9,7 +9,7 @@ function ReminderPage({ reminder }: { reminder: Reminder }) {
         <h1 className="text-2xl font-bold"> Complete {reminder.name}</h1>
         <p>by {toReadableDate(reminder.time)}</p>
       </header>
-      <desc className="inline-block w-full rounded-lg bg-stone-300 p-7 break-all">
+      <desc className="inline-block w-full rounded-lg text-white bg-stone-300/30 p-7 break-all">
         <p>{reminder.content}</p>
       </desc>
     </div>

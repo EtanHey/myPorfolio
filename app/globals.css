@@ -26,7 +26,7 @@
     @apply flex h-full flex-col;
   }
   main {
-    @apply flex-1;
+    @apply flex-1 bg-black/30;
   }
   .section {
     @apply py-24;
@@ -34,10 +34,16 @@
   .center {
     @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
   }
-  .mouse_overlay {
-    @apply absolute h-10 w-10 bg-red-500 opacity-0;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
   }
-  .mouse_overlay-bg {
-    @apply flex h-0 relative min-h-full flex-col overflow-y-clip;
+  50% {
+    scale: 1 1.5
+  }
+  to {
+    rotate: 360deg;
   }
 }

@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="w-full h-fit py-4 bg-blue-500">
+    <header className="w-full h-fit py-4 bg-purple-600/30">
       <nav className="center">
         <ul className="flex justify-center gap-8">
           <li className="">

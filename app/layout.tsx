@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="scrollbar-none">
+      <body className="scrollbar-none bg-black">
         <MouseOverlay>
           <Header />
           <main>{children}</main>
