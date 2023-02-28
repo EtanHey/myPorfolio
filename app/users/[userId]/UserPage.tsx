@@ -7,9 +7,10 @@ const UserPage = ({ user }: { user: User }) => {
 
   return (
     <section className="m-4 py-4">
-      <div className="center">
-        <div className="relative h-40 w-40 rounded-full">
+      <div className="center select-none">
+        <div className="relative h-40 w-40 rounded-full ">
           <Image
+            draggable={false}
             src={`${user?.imageUrl}`}
             alt={user?.firstName + user?.lastName}
             width={160}
@@ -17,7 +18,7 @@ const UserPage = ({ user }: { user: User }) => {
           />
         </div>
         <h1 className="text-xl font-bold">
-          {user?.firstName + user?.lastName}
+          {`${user?.firstName}  ${user?.lastName}`}
         </h1>
         <p className="text-sm text-stone-400">{user?.email}</p>
       </div>

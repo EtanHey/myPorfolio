@@ -1,4 +1,6 @@
 "use client";
+import { Reminder } from "@prisma/client";
+import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { BaseSyntheticEvent } from "react";
 
@@ -12,20 +14,16 @@ const CreateNewReminder = () => {
         name = name.value;
         content = content.value;
         time = time.value;
-        const newReminder = {
+        const newReminder: Omit<Reminder, "id"> = {
           name,
           content,
           time,
         };
-        const response = await fetch(
-          "http://localhost:3000/reminders/controls",
-          {
-            method: "POST",
-            body: JSON.stringify({ newReminder }),
-          }
-        );
+        const { data } = await axios.post("/reminders/controls", {
+          newReminder,
+        });
 
-        const { reminder, error } = await response.json();
+        const { reminder, error } = await data;
         if (error) throw new Error(`${error}`);
         if (reminder) {
           ev.target.reset();
