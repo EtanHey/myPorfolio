@@ -1,4 +1,5 @@
-import NavAuthButton from "@/components/buttons/NavAuthButton";
+import AuthNav from "@/components/authNav/AuthNav";
+import NavAuthButton from "@/components/authNav/NavAuthButton";
 import Link from "next/link";
 import React from "react";
 
@@ -8,10 +9,12 @@ function Header() {
       <nav className="flex flex-row items-center p-4">
         {/* Logo */}
         <Link href="/">
-          <span className="text-3xl font-bold">EtanHey &#128075;</span>
+          <span className="whitespace-nowrap text-3xl font-bold">
+            EtanHey &#128075;
+          </span>
         </Link>
         {/* Navbar: */}
-        <ul className="mx-auto flex justify-center gap-8">
+        <ul className="mx-auto flex justify-center gap-2 sm:gap-8">
           <li className="">
             <Link href="/" className=" text-sm font-medium uppercase">
               Home
@@ -29,14 +32,7 @@ function Header() {
           </li>
         </ul>
         {/* Auth bar: */}
-        <ul className="flex gap-4">
-          <li>
-            <NavAuthButton href="/auth/login" text="Login" fill={true} />
-          </li>
-          <li>
-            <NavAuthButton href="/auth/register" text="Register" />
-          </li>
-        </ul>
+        <AuthNav />
       </nav>
     </header>
   );

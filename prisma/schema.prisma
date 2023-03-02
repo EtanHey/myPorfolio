@@ -14,10 +14,3 @@ model User {
   lastName  String?
   imageUrl  String?
 }
-
-model Reminder {
-  id      String   @id @default(auto()) @map("_id") @db.ObjectId
-  name    String
-  time    String
-  content String
-}
