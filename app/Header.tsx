@@ -21,6 +21,11 @@ function Header() {
               Reminders
             </Link>
           </li>
+          <li className="">
+            <Link href="/projects" className="text-sm font-medium uppercase">
+              Projects
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
