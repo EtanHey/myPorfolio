@@ -1,6 +1,6 @@
 import SidebarContainer from "@/components/sidebar/SidebarContainer";
 import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
-import { Project, User } from "@prisma/client";
+import { Project } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,7 +8,7 @@ import React from "react";
 const Projects = async () => {
   const { projects } = await (async () => {
     const projects: Project[] = [
-      { title: "qr-reader", imgUrl: "/QRReader.png" },
+      { id: "1", title: "qr-reader", imageUrl: "/QRReader.png" },
     ];
     return { projects };
   })();
@@ -23,11 +23,11 @@ const Projects = async () => {
                   href={`/projects/${project.title}`}
                 >
                   <Image
-                  className="mx-auto"
+                    className="mx-auto"
                     width={200}
                     height={200}
                     alt={project.title}
-                    src={`${project.imgUrl}`}
+                    src={`${project.imageUrl}`}
                   />
                   <h1>{project.title}</h1>
                 </Link>
