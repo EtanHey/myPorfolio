@@ -11,7 +11,7 @@ const NavAuth = () => {
   }, [user]);
 
   return (
-    <div className="bg-transparent/30 px-2 py-1 rounded-xl ">{Object.keys(user).length > 0 ? <AdminLogout /> : <AdminLogin />}</div>
+    <div className="bg-transparent/30 rounded-xl items-center flex h-12 ">{Object.keys(user).length > 0 ? <AdminLogout /> : <AdminLogin />}</div>
   );
 };
 

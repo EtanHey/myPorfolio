@@ -7,7 +7,7 @@ import React, { useContext } from "react";
 const AdminLogout = () => {
   const { user, setUser } = useContext(userContext);
   return (
-    <div className="flex flex-row-reverse items-center gap-2">
+    <div className="flex flex-row-reverse items-center gap-2 px-4 py-2">
       <Image
         className="rounded-full"
         src={`${user.imageUrl}`}
