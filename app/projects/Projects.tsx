@@ -1,19 +1,17 @@
+import Logger from "@/components/Logger";
+import AddNewProjectButton from "@/components/projects/AddNewProjectButton";
 import SidebarContainer from "@/components/sidebar/SidebarContainer";
 import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
+import { getProjects } from "@/lib/prisma/projects";
 import { Project } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 
 const Projects = async () => {
-  const { projects } = await (async () => {
-    const projects: Project[] = [
-      { id: "1", title: "qr-reader", imageUrl: "/QRReader.png" },
-    ];
-    return { projects };
-  })();
+  const { projects, error } = await getProjects();
   return (
-    <SidebarContainer title="Projects">
+    <SidebarContainer title="Projects" AddComponent={AddNewProjectButton}>
       <SidebarListContainer>
         {projects
           ? projects?.map((project: Project) => (

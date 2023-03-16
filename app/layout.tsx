@@ -3,8 +3,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import "./output.css";
 import { MouseOverlay } from "@/components/overlays";
-import Providers from "./Providers";
-import Modal from "@/components/login/modal/Modal";
+import Providers from "../components/providers";
+import Modal from "@/components/modal/Modal";
 import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "Etan Heyman`n Portfolio",

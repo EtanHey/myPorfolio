@@ -1,5 +1,5 @@
 "use client";
-import { userContext } from "@/app/Providers";
+import { userContext } from "@/components/providers/contexts";
 import React, { useContext, useEffect } from "react";
 import AdminLogin from "./AdminLogin";
 import AdminLogout from "./AdminLogout";

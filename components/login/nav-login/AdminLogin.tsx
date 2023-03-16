@@ -1,12 +1,14 @@
 "use client";
-import { modalContext, userContext } from "@/app/Providers";
+
+import { modalContext } from "@/components/providers/contexts";
+import { ModalType } from "@/components/providers/types";
 import React, { useContext } from "react";
 
 const AdminLogin = () => {
   const { setModal } = useContext(modalContext);
   return (
     <button
-      onClick={() => setModal(true)}
+      onClick={() => setModal({ open: true, type: ModalType.LOGIN })}
       className="px-4 py-2"
     >
       Login

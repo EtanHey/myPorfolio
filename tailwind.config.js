@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'outfit': "var(--font-outfit)",
+        outfit: "--font-outfit",
       },
       animation: {
         rotate: "rotate 10s ease-in-out infinite",
@@ -21,7 +21,6 @@ module.exports = {
         qrLightGray: "hsl(212, 45%, 89%)",
         qrGrayishBlue: "hsl(220, 15%, 55%)",
         qrDarkBlue: "hsl(218, 44%, 22%)",
-        950: "hsl(218, 44%, 22%)",
       },
     },
   },

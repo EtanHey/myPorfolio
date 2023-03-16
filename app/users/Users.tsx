@@ -1,3 +1,4 @@
+import Logger from "@/components/Logger";
 import SidebarContainer from "@/components/sidebar/SidebarContainer";
 import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
 import { getUsers } from "@/lib/prisma/users";
@@ -5,7 +6,7 @@ import { User } from "@prisma/client";
 import Link from "next/link";
 import React from "react";
 
-const Users = async () => {
+const Users = async (any: any) => {
   const { users, error } = await getUsers();
   return (
     <SidebarContainer title="Users">

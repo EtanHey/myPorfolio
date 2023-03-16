@@ -1,5 +1,6 @@
 "use client";
-import { userContext } from "@/app/Providers";
+
+import { userContext } from "@/components/providers/contexts";
 import { User } from "@prisma/client";
 import Image from "next/image";
 import React, { useContext } from "react";

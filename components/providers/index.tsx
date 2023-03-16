@@ -8,20 +8,11 @@ import React, {
   SetStateAction,
   useState,
 } from "react";
-export const userContext = createContext<{
-  user: User;
-  setUser: Dispatch<SetStateAction<User>>;
-}>({ user: {} as User, setUser: () => {} });
-export const modalContext = createContext<{
-  modal: boolean;
-  setModal: Dispatch<SetStateAction<boolean>>;
-}>({
-  modal: false,
-  setModal: () => {},
-});
+import { userContext, modalContext } from "./contexts";
+
 const Providers = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User>({} as User);
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState({ open: false });
   return (
     <>
       <userContext.Provider value={{ user, setUser }}>
