@@ -18,11 +18,8 @@ export async function GET() {
 export async function POST(req: any) {
   try {
     const { newReminder } = await req.json();
-    console.log(req);
-
     const { reminder, error } = await createReminder(newReminder);
     if (error) throw new Error(`${error}`);
-
     return new Response(JSON.stringify({ reminder }), {
       status: 200,
     });

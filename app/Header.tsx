@@ -1,11 +1,12 @@
+import NavAuth from "@/components/login/nav-login/NavAuth";
 import Link from "next/link";
 import React from "react";
 
 function Header() {
   return (
-    <header className="h-fit w-full bg-purple-600 py-4">
+    <header className="flex h-fit w-full flex-row px-3 items-center bg-purple-600 py-4">
       <nav className="center">
-        <ul className="flex justify-center gap-8">
+        <ul className="flex items-center justify-center gap-8">
           <li className="">
             <Link href="/" className=" text-sm font-medium uppercase">
               Home
@@ -28,6 +29,7 @@ function Header() {
           </li>
         </ul>
       </nav>
+      <NavAuth />
     </header>
   );
 }
