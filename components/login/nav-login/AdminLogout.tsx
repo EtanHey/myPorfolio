@@ -1,5 +1,6 @@
 "use client";
 import { userContext } from "@/app/Providers";
+import { User } from "@prisma/client";
 import Image from "next/image";
 import React, { useContext } from "react";
 
@@ -14,7 +15,7 @@ const AdminLogout = () => {
         height={30}
         width={30}
       />
-      <button onClick={() => setUser({})}>login</button>
+      <button onClick={() => setUser({} as User)}>login</button>
     </div>
   );
 };
