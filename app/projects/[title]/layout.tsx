@@ -1,4 +1,3 @@
-import { outfit } from "@/app/fonts";
 import { Project } from "@prisma/client";
 import React from "react";
 export const generateMetadata = async ({
@@ -12,7 +11,7 @@ export const generateMetadata = async ({
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
-      className={` ${outfit.className} flex  h-full w-full items-center justify-center bg-qrLightGray`}
+      className={`flex  h-full w-full items-center justify-center bg-qrLightGray`}
     >
       {children}
     </div>

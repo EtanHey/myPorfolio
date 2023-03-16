@@ -959,6 +959,14 @@ main {
   text-align: center;
 }
 
+.font-outfit {
+  font-family: var(--font-outfit);
+}
+
+.font-\[\] {
+  font-family: ;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1002,6 +1010,16 @@ main {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-qrDarkBlue {
+  --tw-text-opacity: 1;
+  color: hsl(218 44% 22% / var(--tw-text-opacity));
+}
+
+.text-qrLightGray {
+  --tw-text-opacity: 1;
+  color: hsl(212 45% 89% / var(--tw-text-opacity));
 }
 
 .text-stone-400 {
