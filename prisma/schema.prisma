@@ -8,7 +8,7 @@ datasource db {
 }
 
 model Project {
-  id       String  @id @map("_id")
+  id       String @id @map("_id")
   title    String
   imageUrl String
 }
@@ -19,6 +19,7 @@ model User {
   firstName String
   lastName  String?
   imageUrl  String?
+  password  String  @unique
 }
 
 model Reminder {

@@ -3,6 +3,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import "./output.css";
 import { MouseOverlay } from "@/components/overlays";
+import Providers from "./Providers";
+import Modal from "@/components/login/modal/Modal";
 
 export const metadata: Metadata = {
   title: "Etan Heyman`n Portfolio",
@@ -17,11 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="scrollbar-none bg-black">
-        <MouseOverlay>
+        <Providers>
+          {/* <MouseOverlay> */}
           <Header />
           <main>{children}</main>
+          <Modal />
           <Footer />
-        </MouseOverlay>
+          {/* </MouseOverlay> */}
+        </Providers>
       </body>
     </html>
   );
