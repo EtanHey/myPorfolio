@@ -2,7 +2,7 @@ import Logger from "@/components/Logger";
 import AddNewProjectButton from "@/components/projects/AddNewProjectButton";
 import SidebarContainer from "@/components/sidebar/SidebarContainer";
 import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
-import { getProjects } from "@/lib/prisma/projects";
+import { getProjects } from "@/lib/prisma/projectsCont";
 import { Project } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,7 +17,7 @@ const Projects = async () => {
           ? projects?.map((project: Project) => (
               <li className="" key={project.title}>
                 <Link
-                  className="text-center "
+                  className="text-center"
                   href={`/projects/${project.title}`}
                 >
                   <Image
@@ -25,7 +25,7 @@ const Projects = async () => {
                     width={200}
                     height={200}
                     alt={project.title}
-                    src={`${project.imageUrl}`}
+                    src={`${project.projectIconImageUrl}`}
                   />
                   <h1>{project.title}</h1>
                 </Link>

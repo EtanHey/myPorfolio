@@ -3,7 +3,7 @@
 import { modalContext } from "@/components/providers/contexts";
 import React, { useContext } from "react";
 import LoginForm from "../login/form/LoginForm";
-import CreateNewProject from "../projects/CreateNewProject";
+import CreateNewProject from "../projects/AddNewProjectForm";
 import { ModalType } from "../providers/types";
 
 const Modal = () => {

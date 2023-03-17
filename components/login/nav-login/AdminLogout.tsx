@@ -16,7 +16,7 @@ const AdminLogout = () => {
         height={30}
         width={30}
       />
-      <button onClick={() => setUser({} as User)}>login</button>
+      <button onClick={() => setUser({} as User)}>logout</button>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { getUserById } from "@/lib/prisma/users";
+import { getUserById } from "@/lib/prisma/usersCont";
 import { User } from "@prisma/client";
 import React from "react";
 import UserPage from "./UserPage";

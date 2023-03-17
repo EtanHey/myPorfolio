@@ -1,4 +1,4 @@
-import { getRemindersById } from "@/lib/prisma/reminders";
+import { getRemindersById } from "@/lib/prisma/remindersCont";
 import { Reminder } from "@prisma/client";
 import React from "react";
 import ReminderPage from "./ReminderPage";

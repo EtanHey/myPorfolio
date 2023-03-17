@@ -1,6 +1,6 @@
 import SidebarContainer from "@/components/sidebar/SidebarContainer";
 import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
-import { getReminders } from "@/lib/prisma/reminders";
+import { getReminders } from "@/lib/prisma/remindersCont";
 import { Reminder } from "@prisma/client";
 import Link from "next/link";
 import React from "react";

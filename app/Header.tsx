@@ -4,7 +4,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="flex h-fit w-full flex-row px-3 items-center bg-purple-600 py-4">
+    <header className="flex h-fit w-full flex-row items-center bg-purple-600 px-3 py-4 text-white">
       <nav className="center">
         <ul className="flex items-center justify-center gap-8">
           <li className="">

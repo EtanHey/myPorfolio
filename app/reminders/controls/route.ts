@@ -1,4 +1,4 @@
-import { createReminder, getReminders } from "@/lib/prisma/reminders";
+import { createReminder, getReminders } from "@/lib/prisma/remindersCont";
 import { NextRequest } from "next/server";
 
 export async function GET() {

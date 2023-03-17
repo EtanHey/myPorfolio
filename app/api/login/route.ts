@@ -1,4 +1,4 @@
-import { getUserByLoginInfo } from "@/lib/prisma/users";
+import { getUserByLoginInfo } from "@/lib/prisma/usersCont";
 import { User } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 

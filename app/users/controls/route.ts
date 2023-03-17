@@ -1,4 +1,4 @@
-import { createUser, getUsers } from "@/lib/prisma/users";
+import { createUser, getUsers } from "@/lib/prisma/usersCont";
 import { User } from "@prisma/client";
 
 export async function GET() {
