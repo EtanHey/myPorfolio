@@ -13,7 +13,7 @@ const Projects = async () => {
   return (
     <SidebarContainer title="Projects" AddComponent={AddNewProjectButton}>
       <SidebarListContainer>
-        {projects
+        {/* {projects
           ? projects?.map((project: Project) => (
               <li className="" key={project.title}>
                 <Link
@@ -31,7 +31,7 @@ const Projects = async () => {
                 </Link>
               </li>
             ))
-          : null}
+          : null} */}
       </SidebarListContainer>
     </SidebarContainer>
   );
