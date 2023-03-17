@@ -6,7 +6,7 @@ import { User } from "@prisma/client";
 import Link from "next/link";
 import React from "react";
 
-const Users = async (any: any) => {
+const Users = async () => {
   const { users, error } = await getUsers();
   return (
     <SidebarContainer title="Users">
