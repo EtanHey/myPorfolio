@@ -28,8 +28,7 @@ const AddNewProjectForm = () => {
         description = description.value;
         const newProject: Omit<Project, "id"> = {
           githubUrl,
-          projectIconImageUrl,
-          projectPreviewImageUrl,
+          imageUrl,
           projectUrl,
           title,
           description,
