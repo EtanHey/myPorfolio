@@ -1,4 +1,3 @@
-import NavAuth from "@/components/login/nav-login/NavAuth";
 import Link from "next/link";
 import React from "react";
 
@@ -12,16 +11,6 @@ function Header() {
               Home
             </Link>
           </li>
-          <li>
-            <Link href="/users" className="text-sm font-medium uppercase">
-              Users
-            </Link>
-          </li>
-          <li>
-            <Link href="/reminders" className="text-sm font-medium uppercase">
-              Reminders
-            </Link>
-          </li>
           <li className="">
             <Link href="/projects" className="text-sm font-medium uppercase">
               Projects
@@ -29,7 +18,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <NavAuth />
     </header>
   );
 }

@@ -1,7 +1,7 @@
 import LayoutWSidebar from "@/components/layouts/LayoutWSidebar";
 import { Metadata } from "next";
 import React from "react";
-import Projects from "./Projects";
+import { Projects } from "./Projects";
 
 export const metadata: Metadata = {
   title: "Projects",

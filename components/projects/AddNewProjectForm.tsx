@@ -12,15 +12,8 @@ const AddNewProjectForm = () => {
     console.log(ev);
 
     try {
-      let {
-        githubUrl,
-        imageUrl,
-        projectUrl,
-        title,
-        description,
-        projectIconImageUrl,
-        projectPreviewImageUrl,
-      } = ev.currentTarget.elements;
+      let { githubUrl, imageUrl, projectUrl, title, description } =
+        ev.currentTarget.elements;
       if (githubUrl && imageUrl && projectUrl && title && description) {
         githubUrl = githubUrl.value;
         projectUrl = projectUrl.value;
@@ -28,7 +21,6 @@ const AddNewProjectForm = () => {
         description = description.value;
         const newProject: Omit<Project, "id"> = {
           githubUrl,
-          imageUrl,
           projectUrl,
           title,
           description,
@@ -53,17 +45,37 @@ const AddNewProjectForm = () => {
       onSubmit={(ev) => {
         handleAddNewProject(ev);
       }}
-      className="flex flex-col gap-4 rounded-lg border-2 border-stone-400 bg-stone-300/30 p-4"
+      className="flex h-full w-fit flex-col gap-4 p-4 transition-all"
     >
-      <div className="flex flex-col gap-2">
+      <div className="flex w-fit flex-col gap-2">
         <label htmlFor="githubUrl">Github URL</label>
         <input
           type="text"
           name="githubUrl"
           id="githubUrl"
           placeholder="https://github.com/..."
+          className="w-96"
         />
-        <label htmlFor="projectPreview">Project preview:</label>
+        <label htmlFor="projectUrl">Project URL</label>
+        <input
+          type="text"
+          name="projectUrl"
+          id="projectUrl"
+          placeholder="https://vercel.com/etanhey/..."
+        />
+        <label htmlFor="title">Title</label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="My Awesome Project"
+        />
+        <label htmlFor="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          placeholder="A short description of your project..."
+        />
         <input type="submit" value="submit" />
       </div>
     </form>

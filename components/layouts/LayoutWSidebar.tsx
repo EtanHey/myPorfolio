@@ -13,7 +13,7 @@ function LayoutWSidebar({
         {/* @ts-ignore */}
         <List />
       </aside>
-      <main>{children}</main>
+      <main className="h-full w-full max-h-full bg-gradient-to-t from-indigo-300 to-purple-600">{children}</main>
     </section>
   );
 }

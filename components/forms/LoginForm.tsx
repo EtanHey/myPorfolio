@@ -15,7 +15,7 @@ const LoginForm = () => {
       const email = e.currentTarget.elements.namedItem("email").value;
       const password = e.currentTarget.elements.namedItem("password").value;
       const userInfo = { email, password };
-      const { data } = await axios.post("/api/login/", { userInfo });
+      const { data } = await axios.post("/api/login", { userInfo });
       const user = data.receivedUser;
       if (user) {
         e.target.reset();

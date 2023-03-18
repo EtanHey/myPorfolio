@@ -5,12 +5,10 @@ import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
 import { getProjects } from "@/lib/prisma/projectsCont";
 import React, { useContext } from "react";
 
-export const Projects = async () => {
+const Projects = async () => {
   const { projects, error } = await getProjects();
-  return (
-    <SidebarContainer title="Projects">
-      <SidebarListContainer>
-        {/* {projects
+  return <>projects</>;
+  /* {projects
           ? projects?.map((project: Project) => (
               <li className="" key={project.title}>
                 <Link
@@ -28,8 +26,6 @@ export const Projects = async () => {
                 </Link>
               </li>
             ))
-          : null} */}
-      </SidebarListContainer>
-    </SidebarContainer>
-  );
+          : null} */
 };
+export default Projects;

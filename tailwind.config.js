@@ -22,7 +22,9 @@ module.exports = {
         qrGrayishBlue: "hsl(220, 15%, 55%)",
         qrDarkBlue: "hsl(218, 44%, 22%)",
       },
+      
     },
+    // primary:
   },
 
   plugins: [],
