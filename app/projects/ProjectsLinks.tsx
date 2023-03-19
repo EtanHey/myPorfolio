@@ -20,7 +20,7 @@ const ProjectsLinks = ({ projects }: { projects: Project[] | undefined }) => {
               :<span className="text-2xl">&#10098;</span>
               {projects.map((project) => (
                 <Link
-                  className={`px-3 py-1 text-sm font-medium uppercase ${
+                  className={`px-3 py-1 text-sm font-medium uppercase transition-all duration-300 ${
                     project.id === pageId
                       ? "rounded bg-white/20 drop-shadow-lg backdrop-blur-lg"
                       : ""
