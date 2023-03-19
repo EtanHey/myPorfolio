@@ -3,7 +3,6 @@ import { Project } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { BaseSyntheticEvent, useContext } from "react";
-import { LabeledTextInput } from "../forms";
 import { modalContext } from "../providers/contexts";
 
 const AddNewProjectForm = () => {
@@ -51,7 +50,7 @@ const AddNewProjectForm = () => {
       className="flex h-full w-fit flex-col gap-4 p-4 transition-all"
     >
       <div className="flex w-fit flex-col gap-2">
-        <LabeledTextInput
+        {/* <LabeledTextInput
           label="Github repo URL"
           name="githubUrl"
           placeholder="https://github.com/..."
@@ -70,7 +69,7 @@ const AddNewProjectForm = () => {
           label="Description"
           name="description"
           placeholder="A short description of your project..."
-        />
+        /> */}
         <input type="submit" value="submit" />
       </div>
     </form>
