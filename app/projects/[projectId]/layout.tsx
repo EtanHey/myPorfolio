@@ -11,7 +11,7 @@ export const generateMetadata = async ({
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
-      className={`flex  h-full w-full items-center justify-center bg-qrLightGray`}
+      className={`flex h-0 min-h-full w-full flex-col items-center justify-center bg-qrLightGray`}
     >
       {children}
     </div>

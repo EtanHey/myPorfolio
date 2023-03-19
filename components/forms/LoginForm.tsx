@@ -2,6 +2,7 @@
 import { modalContext, userContext } from "@/components/providers/contexts";
 import axios from "axios";
 import React, { BaseSyntheticEvent, useContext } from "react";
+import { TransparentWrapper } from "../wrapper";
 
 const LoginForm = () => {
   const { setUser } = useContext(userContext);
@@ -28,7 +29,7 @@ const LoginForm = () => {
   };
   return (
     <form
-      className="flex h-0 min-h-full flex-shrink-0 flex-col justify-around space-y-4"
+      className="flex h-0 min-h-full w-full flex-shrink-0 flex-col justify-around space-y-4 px-12 sm:px-24 md:px-36 lg:px-48 xl:px-60 2xl:px-72"
       onSubmit={handleSignIn}
     >
       <div className="flex flex-col">

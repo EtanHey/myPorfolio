@@ -2,40 +2,43 @@
 import { Project } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import React, { BaseSyntheticEvent, useState } from "react";
+import React, { BaseSyntheticEvent, useContext } from "react";
+import { LabeledTextInput } from "../forms";
+import { modalContext } from "../providers/contexts";
 
 const AddNewProjectForm = () => {
   const router = useRouter();
-  const [projectPreview, setProjectPreview] = useState("");
+  const { setModal } = useContext(modalContext);
   const handleAddNewProject = async (ev: BaseSyntheticEvent) => {
     ev.preventDefault();
     console.log(ev);
 
     try {
-      let { githubUrl, imageUrl, projectUrl, title, description } =
+      let { githubUrl, projectUrl, title, description } =
         ev.currentTarget.elements;
-      if (githubUrl && imageUrl && projectUrl && title && description) {
-        githubUrl = githubUrl.value;
-        projectUrl = projectUrl.value;
-        title = title.value;
-        description = description.value;
-        const newProject: Omit<Project, "id"> = {
-          githubUrl,
-          projectUrl,
-          title,
-          description,
-        };
+      if (!githubUrl || !projectUrl || !title || !description)
+        throw new Error("All fields are required");
+      githubUrl = githubUrl.value;
+      projectUrl = projectUrl.value;
+      title = title.value;
+      description = description.value;
+      const newProject: Omit<Project, "id"> = {
+        githubUrl,
+        projectUrl,
+        title,
+        description,
+      };
+      const {
+        data: { project, error },
+      } = await axios.post("/projects/controls", {
+        newProject,
+      });
+      console.log({ project, error });
+      if (error) throw new Error(error);
+      if (project) {
+        ev.target.reset();
+        setModal({ open: false, type: undefined });
       }
-      // const { data } = await axios.post("/projects/controls", {
-      //   newProject,
-      // });
-
-      // const { reminder, error } = await data;
-      // if (error) throw new Error(`${error}`);
-      // if (reminder) {
-      //   ev.target.reset();
-      //   router.refresh();
-      // }
     } catch (error) {
       console.log(error);
     }
@@ -48,32 +51,24 @@ const AddNewProjectForm = () => {
       className="flex h-full w-fit flex-col gap-4 p-4 transition-all"
     >
       <div className="flex w-fit flex-col gap-2">
-        <label htmlFor="githubUrl">Github URL</label>
-        <input
-          type="text"
+        <LabeledTextInput
+          label="Github repo URL"
           name="githubUrl"
-          id="githubUrl"
           placeholder="https://github.com/..."
-          className="w-96"
         />
-        <label htmlFor="projectUrl">Project URL</label>
-        <input
-          type="text"
+        <LabeledTextInput
+          label="Project live URL"
           name="projectUrl"
-          id="projectUrl"
           placeholder="https://vercel.com/etanhey/..."
         />
-        <label htmlFor="title">Title</label>
-        <input
-          type="text"
+        <LabeledTextInput
+          label="Project Title"
           name="title"
-          id="title"
           placeholder="My Awesome Project"
         />
-        <label htmlFor="description">Description</label>
-        <textarea
+        <LabeledTextInput
+          label="Description"
           name="description"
-          id="description"
           placeholder="A short description of your project..."
         />
         <input type="submit" value="submit" />

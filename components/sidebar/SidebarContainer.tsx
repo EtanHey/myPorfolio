@@ -12,7 +12,7 @@ function SidebarContainer({
       <div className="sticky top-0 flex place-content-between bg-inherit p-4">
         <h2 className="text-xl font-medium">{title}</h2>
       </div>
-      <div className="bg-white/30 py-4 pl-4">{children}</div>
+      <div className="scrollbar-none bg-white/30 py-4 pl-4">{children}</div>
     </section>
   );
 }

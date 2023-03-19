@@ -1,2 +1,4 @@
 import LoginForm from "./LoginForm";
-export { LoginForm };
+import LabeledTextArea from "./inputs/labeledTextArea";
+import LabeledTextInput from "./inputs/labeledTextInput";
+export { LoginForm, LabeledTextArea, LabeledTextInput };

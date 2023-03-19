@@ -1,22 +1,12 @@
 import React from "react";
 
-const LayoutWOSidebar = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className: string;
-}) => {
+const LayoutWOSidebar = ({ children }: { children: React.ReactNode }) => {
   return (
-    <section
-      className={`flex h-full justify-center py-3 px-4 sm:px-6 md:px-8 lg:px-12 ${className}`}
-    >
-      <main
-        className={`h-0 min-h-full min-w-fit max-w-3xl rounded bg-white bg-opacity-20 py-6 px-4 drop-shadow-lg backdrop-blur-lg sm:max-w-3xl sm:py-6 sm:px-6 md:max-w-7xl md:py-8 md:px-8 lg:max-w-full lg:py-12 lg:px-12 `}
-      >
+    <main className="w-full overflow-y-auto border-white/20 bg-gradient-to-t from-indigo-300 to-purple-600 p-0 sm:py-4 sm:px-6 md:px-8 lg:px-24 xl:px-72 2xl:px-96">
+      <section className=" scrollbar-none h-0 min-h-full min-w-fit max-w-3xl overflow-y-clip rounded border-56 border-white/10 bg-white bg-opacity-20 drop-shadow-lg backdrop-blur-lg sm:max-w-3xl md:max-w-7xl lg:max-w-full">
         {children}
-      </main>
-    </section>
+      </section>
+    </main>
   );
 };
 

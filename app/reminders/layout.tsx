@@ -1,4 +1,4 @@
-import LayoutWSidebar from "@/components/layouts/LayoutWSidebar";
+import InnerSidebarLayout from "@/components/layouts/InnerSidebarLayout";
 import { Metadata } from "next";
 import React from "react";
 import Reminders from "./Reminders";
@@ -6,10 +6,10 @@ import Reminders from "./Reminders";
 export const metadata: Metadata = {
   title: "Reminders",
   description: "Reminders list",
-}
+};
 
 const RemindersLayout = async ({ children }: { children: React.ReactNode }) => {
-  return <LayoutWSidebar List={Reminders}>{children}</LayoutWSidebar>;
+  return <InnerSidebarLayout List={Reminders}>{children}</InnerSidebarLayout>;
 };
 
 export default RemindersLayout;

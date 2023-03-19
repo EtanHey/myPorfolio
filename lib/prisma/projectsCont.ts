@@ -21,9 +21,14 @@ export async function addProject(project: any) {
   }
 }
 
-export async function saveProjectPreview(projectPreview: any) {
+export async function getProjectById(id: Project["id"]) {
   try {
-    console.log(projectPreview, "projectPreview");
+    const project = await prisma.project.findUnique({
+      where: {
+        id,
+      },
+    });
+    return { project };
   } catch (error) {
     return { error };
   }

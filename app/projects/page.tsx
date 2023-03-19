@@ -1,16 +1,12 @@
+import InnerSidebarLayout from "@/components/layouts/InnerSidebarLayout";
 import React from "react";
+import { Projects } from "./Projects";
 
 const page = async () => {
   return (
-    <div className="h-full">
-      <iframe
-        src="https://qr-code-component-etanhey.vercel.app/"
-        width="100%"
-        height="700"
-        title="QR Code Component"
-        allowFullScreen={true}
-      ></iframe>
-    </div>
+    // <div className="h-full">
+      <h1>h</h1>
+    // </div>
   );
 };
 
