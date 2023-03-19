@@ -1,7 +1,8 @@
-import LayoutWSidebar from "@/components/layouts/LayoutWSidebar";
+import InnerLayout from "@/components/layouts/InnerLayout";
+import InnerSidebarLayout from "@/components/layouts/InnerSidebarLayout";
 import { Metadata } from "next";
 import React from "react";
-import Projects from "./Projects";
+import { Projects } from "./Projects";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const ProjectsLayout = async ({ children }: { children: React.ReactNode }) => {
-  return <LayoutWSidebar List={Projects}>{children}</LayoutWSidebar>;
+  return <InnerLayout>{children}</InnerLayout>;
 };
 
 export default ProjectsLayout;

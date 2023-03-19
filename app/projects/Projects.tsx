@@ -1,33 +1,34 @@
 import SidebarContainer from "@/components/sidebar/SidebarContainer";
 import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
+import { getProjects } from "@/lib/prisma/projectsCont";
 import { Project } from "@prisma/client";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Projects = async () => {
-  const { projects } = await (async () => {
-    const projects: Project[] = [
-      { id: "1", title: "qr-reader", imageUrl: "/QRReader.png" },
-    ];
-    return { projects };
-  })();
+export const Projects = async () => {
+  const { projects, error } = await getProjects();
   return (
     <SidebarContainer title="Projects">
       <SidebarListContainer>
         {projects
           ? projects?.map((project: Project) => (
-              <li className="" key={project.title}>
+              <li
+                className="max-h-fit"
+                key={project.id}
+              >
                 <Link
-                  className="text-center "
-                  href={`/projects/${project.title}`}
+                  className="relative  flex h-96 w-full items-center "
+                  href={`/projects/${project.id}`}
                 >
-                  <Image
-                    className="mx-auto"
-                    width={200}
-                    height={200}
-                    alt={project.title}
-                    src={`${project.imageUrl}`}
+                  <iframe
+                    src={project.projectUrl}
+                    width="800"
+                    height="500"
+                    loading="eager"
+                    title={project.title}
+                    allowFullScreen={true}
+                    style={{ WebkitTransform: "scale(0.5)" }}
+                    className="absolute top-0 h-96"
                   />
                   <h1>{project.title}</h1>
                 </Link>
@@ -38,5 +39,3 @@ const Projects = async () => {
     </SidebarContainer>
   );
 };
-
-export default Projects;
