@@ -1,3 +1,5 @@
+import GoToPage from "@/components/actions/buttons/GoToPage";
+import GitHubIcon from "@/components/icons/GitHubIcon";
 import { getProjectById } from "@/lib/prisma";
 import { Project } from "@prisma/client";
 
@@ -27,10 +29,19 @@ const layout = async ({
       id={id}
       className={`flex aspect-square h-0 min-h-full w-full grow flex-col  justify-center bg-qrLightGray`}
     >
-      <div className="md: flex flex-row justify-between gap-4 sm:gap-12 md:gap-36 lg:gap-48 xl:gap-60">
-        <h1 className="w-fit text-2xl font-semibold tracking-tight">{title}</h1>
-        <p className="grow">{description}</p>
-      </div>
+      <header className="flex flex-col px-4 pt-2 sm:px-12 md:px-36 lg:px-48 xl:px-60">
+        <div className="flex justify-between">
+          <GoToPage title={title} url={projectUrl}>
+            <h1 className="w-fit text-2xl font-semibold tracking-tight transition-colors duration-300 hover:text-violet-500/50">
+              {title}
+            </h1>
+          </GoToPage>
+          <GoToPage title={title} url={githubUrl}>
+            <GitHubIcon height={49} width={48} />
+          </GoToPage>
+        </div>
+        <p>{description}</p>
+      </header>
       {children}
     </div>
   );

@@ -10,13 +10,11 @@ function Header({ projects }: { projects: Project[] }) {
       <nav className="center">
         <ul className="flex flex-wrap items-center justify-center gap-8">
           <li>
-            <Link href="/" className=" text-sm font-medium uppercase">
+            <Link href="/" className="px-3 py-1 text-sm font-medium uppercase">
               Home
             </Link>
           </li>
-          <li>
-            <ProjectsLinks projects={projects} />
-          </li>
+          <ProjectsLinks projects={projects} />
         </ul>
       </nav>
     </header>
