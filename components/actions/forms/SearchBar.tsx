@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 
 const SearchBar = () => {
   return (
-    <div className="relative w-full">
+    <form className="relative w-full">
       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
         <svg
           aria-hidden="true"
@@ -35,7 +36,7 @@ const SearchBar = () => {
       >
         Search
       </button>
-    </div>
+    </form>
   );
 };
 

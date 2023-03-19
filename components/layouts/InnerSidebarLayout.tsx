@@ -8,8 +8,8 @@ function InnerSidebarLayout({
   List: () => Promise<JSX.Element>;
 }) {
   return (
-    <div className="scrollbar-none h-0 min-h-full w-full overflow-y-scroll ">
-      <aside className="h-0 min-h-full overflow-y-scroll">
+    <div className="scrollbar-none h-0 min-h-full w-full overflow-y-scroll">
+      <aside className="scrollbar-none h-0 min-h-full w-full overflow-y-scroll">
         {/* @ts-ignore */}
         <List />
       </aside>

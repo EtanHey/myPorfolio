@@ -1,3 +1,4 @@
+import InnerLayout from "@/components/layouts/InnerLayout";
 import InnerSidebarLayout from "@/components/layouts/InnerSidebarLayout";
 import { Metadata } from "next";
 import React from "react";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const ProjectsLayout = async ({ children }: { children: React.ReactNode }) => {
-  return <InnerSidebarLayout List={Projects}>{children}</InnerSidebarLayout>;
+  return <InnerLayout>{children}</InnerLayout>;
 };
 
 export default ProjectsLayout;

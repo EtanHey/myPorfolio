@@ -1,13 +1,8 @@
-import Logger from "@/components/Logger";
-import AddNewProjectButton from "@/components/projects/AddNewProjectButton";
-import SidebarContainer from "@/components/sidebar/SidebarContainer";
-import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
-import { TransparentWrapper } from "@/components/wrapper";
+import DeleteProjectButton from "@/components/actions/buttons/DeleteProjectButton";
+import { TrashIcon } from "@/components/icons";
 import { getProjects } from "@/lib/prisma/projectsCont";
 import { Project } from "@prisma/client";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useContext } from "react";
+import React from "react";
 
 const Projects = async () => {
   const { projects, error } = await getProjects();
@@ -17,6 +12,7 @@ const Projects = async () => {
         ? projects?.map((project: Project) => (
             <li key={project.id} className="flex w-full  items-center">
               <h1>{project.title}</h1>
+              <DeleteProjectButton id={project.id} />
             </li>
           ))
         : error

@@ -3,8 +3,8 @@
 import { modalContext } from "@/components/providers/contexts";
 import React, { useContext } from "react";
 import { LoginForm } from "../forms";
-import CreateNewProject from "../projects/AddNewProjectForm";
-import { ModalType } from "../providers/types";
+import CreateNewProject from "../forms/AddNewProjectForm";
+import { ModalType } from "../../providers/types";
 
 const Modal = () => {
   const { modal, setModal } = useContext(modalContext);
@@ -28,7 +28,7 @@ const Modal = () => {
         ${
           modal.open
             ? "left-0 sm:left-auto sm:scale-100"
-            : "-left-full sm:left-auto sm:scale-0"
+            : "pointer-events-none -left-full sm:left-auto sm:scale-0"
         }`}
       >
         <button

@@ -1,12 +1,13 @@
-import { addProject, getProjects } from "@/lib/prisma/projectsCont";
-// import { saveProjectPreview } from "@/lib/prisma/projectsCont";
+import { deleteProject, getProjects } from "@/lib/prisma/projectsCont";
+import { AxiosRequestConfig } from "axios";
+import { NextRequest } from "next/server";
 
-export async function POST(req: any) {
+export async function POST(req: any, res: any) {
   try {
-    const { newProject } = await req.json();
-    const { project, error } = await addProject(newProject);
+    const { id } = await req.json();
+    const { deletedProject, error } = await deleteProject(id);
     if (error) throw new Error(`${error}`);
-    return new Response(JSON.stringify({ project }), {
+    return new Response(JSON.stringify({ deletedProject }), {
       status: 200,
     });
   } catch (error: any) {
@@ -15,7 +16,6 @@ export async function POST(req: any) {
     });
   }
 }
-
 export async function GET(req: any) {
   try {
     const { projects, error } = await getProjects();

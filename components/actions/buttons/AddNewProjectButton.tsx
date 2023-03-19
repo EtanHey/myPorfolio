@@ -1,10 +1,10 @@
 "use client";
 import React, { useContext } from "react";
-import { modalContext } from "../providers/contexts";
-import { ModalType } from "../providers/types";
+import { modalContext } from "../../providers/contexts";
+import { ModalType } from "../../providers/types";
 
 const AddNewProjectButton = () => {
-  const { modal, setModal } = useContext(modalContext);
+  const { setModal } = useContext(modalContext);
   return (
     <button
       onClick={() => setModal({ open: true, type: ModalType.NEW_PROJECT })}

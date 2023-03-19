@@ -2,7 +2,7 @@
 import { modalContext, userContext } from "@/components/providers/contexts";
 import axios from "axios";
 import React, { BaseSyntheticEvent, useContext } from "react";
-import { TransparentWrapper } from "../wrapper";
+import { TransparentWrapper } from "../../wrapper";
 
 const LoginForm = () => {
   const { setUser } = useContext(userContext);

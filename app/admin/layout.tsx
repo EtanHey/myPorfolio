@@ -1,4 +1,4 @@
-import AdminContainer from "@/components/admin/Container";
+import AdminContainer from "@/components/providers/admin/Container";
 import InnerLayout from "@/components/layouts/InnerLayout";
 import LayoutWOSidebar from "@/components/layouts/LayoutWOSidebar";
 import { Metadata } from "next";

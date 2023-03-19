@@ -3,8 +3,8 @@ import { Project } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { BaseSyntheticEvent, useContext } from "react";
-import { LabeledTextInput } from "../forms";
-import { modalContext } from "../providers/contexts";
+import { LabeledTextInput } from ".";
+import { modalContext } from "../../providers/contexts";
 
 const AddNewProjectForm = () => {
   const router = useRouter();
@@ -38,6 +38,7 @@ const AddNewProjectForm = () => {
       if (project) {
         ev.target.reset();
         setModal({ open: false, type: undefined });
+        router.refresh();
       }
     } catch (error) {
       console.log(error);

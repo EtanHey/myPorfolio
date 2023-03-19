@@ -1,10 +1,7 @@
-import { LoginForm } from "@/components/forms";
+import { AddNewProjectButton } from "@/components/actions/forms";
 import InnerLayout from "@/components/layouts/InnerLayout";
-import LayoutWOSidebar from "@/components/layouts/LayoutWOSidebar";
-import AddNewProjectButton from "@/components/projects/AddNewProjectButton";
-import { userContext } from "@/components/providers/contexts";
-import SearchBar from "@/components/search-bar/SearchBar";
-import React, { useContext } from "react";
+import SearchBar from "@/components/actions/forms/SearchBar";
+import React from "react";
 import Projects from "./Projects";
 
 const Page = async () => {

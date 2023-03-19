@@ -1,11 +1,11 @@
-import InnerSidebarLayout from "@/components/layouts/InnerSidebarLayout";
 import React from "react";
-import { Projects } from "./Projects";
 
 const page = async () => {
   return (
     // <div className="h-full">
-      <h1>h</h1>
+    <h1 className="text-xl font-bold leading-loose">
+      Select a project above ^{" "}
+    </h1>
     // </div>
   );
 };

@@ -1,25 +1,21 @@
+import { getProjects } from "@/lib/prisma";
+import { Project } from "@prisma/client";
 import Link from "next/link";
 import React from "react";
+import ProjectsLinks from "./projects/ProjectsLinks";
 
-function Header() {
+function Header({ projects }: { projects: Project[] }) {
   return (
-    <header className="flex h-fit w-full flex-row items-center bg-purple-600 px-3 py-4 text-white">
+    <header className="flex  h-fit w-full flex-row items-center bg-purple-600 px-3 py-4 text-white">
       <nav className="center">
-        <ul className="flex items-center justify-center gap-8">
+        <ul className="flex flex-wrap items-center justify-center gap-8">
           <li>
             <Link href="/" className=" text-sm font-medium uppercase">
               Home
             </Link>
           </li>
           <li>
-              <Link href="/projects" className="text-sm font-medium uppercase">
-                Projects
-              </Link>
-          </li>
-          <li>
-              <Link href="/users" className="text-sm font-medium uppercase">
-                Users
-              </Link>
+            <ProjectsLinks projects={projects} />
           </li>
         </ul>
       </nav>

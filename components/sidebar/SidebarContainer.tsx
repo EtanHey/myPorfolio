@@ -8,11 +8,11 @@ function SidebarContainer({
   title: string;
 }) {
   return (
-    <section className="scrollbar-none z-10 h-0 min-h-full w-full overflow-y-auto bg-stone-400 text-black">
-      <div className="sticky top-0 flex place-content-between bg-inherit p-4">
+    <section className="scrollbar-none  bg-white/30 bg-stone-400 text-black">
+      <div className="sticky  top-0 z-50 flex w-full place-content-between bg-violet-400/30 p-4 drop-shadow-2xl  backdrop-blur-3xl">
         <h2 className="text-xl font-medium">{title}</h2>
       </div>
-      <div className="scrollbar-none bg-white/30 py-4 pl-4">{children}</div>
+      <div className="scrollbar-none py-4 pl-4 ">{children}</div>
     </section>
   );
 }
