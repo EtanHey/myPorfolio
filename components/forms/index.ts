@@ -1,7 +1,7 @@
 import LoginForm from "./LoginForm";
-// import LabeledTextArea from "./inputs/labeledTextArea";
-// import LabeledTextInput from "./inputs/labeledTextInput";
+import LabeledTextArea from "./inputs/LabeledTextArea";
+import LabeledTextInput from "./inputs/LabeledTextInput";
 export {
   LoginForm,
-  // LabeledTextArea, LabeledTextInput
+  LabeledTextArea, LabeledTextInput
 };
