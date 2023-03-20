@@ -11,8 +11,6 @@ const AddNewProjectForm = () => {
   const { setModal } = useContext(modalContext);
   const handleAddNewProject = async (ev: BaseSyntheticEvent) => {
     ev.preventDefault();
-    console.log(ev);
-
     try {
       let { githubUrl, projectUrl, title, description } =
         ev.currentTarget.elements;
@@ -33,7 +31,6 @@ const AddNewProjectForm = () => {
       } = await axios.post("/projects/controls", {
         newProject,
       });
-      console.log({ project, error });
       if (error) throw new Error(error);
       if (project) {
         ev.target.reset();

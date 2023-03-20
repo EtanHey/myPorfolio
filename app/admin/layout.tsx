@@ -1,6 +1,5 @@
 import AdminContainer from "@/components/providers/admin/Container";
 import InnerLayout from "@/components/layouts/InnerLayout";
-import LayoutWOSidebar from "@/components/layouts/LayoutWOSidebar";
 import { Metadata } from "next";
 import React from "react";
 

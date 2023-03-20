@@ -1,6 +1,4 @@
 import { addProject, getProjects } from "@/lib/prisma/projectsCont";
-// import { saveProjectPreview } from "@/lib/prisma/projectsCont";
-
 export async function POST(req: any) {
   try {
     const { newProject } = await req.json();
@@ -16,7 +14,7 @@ export async function POST(req: any) {
   }
 }
 
-export async function GET(req: any) {
+export async function GET() {
   try {
     const { projects, error } = await getProjects();
     if (error) throw new Error(`${error}`);

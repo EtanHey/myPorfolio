@@ -1,8 +1,5 @@
 import { deleteProject, getProjects } from "@/lib/prisma/projectsCont";
-import { AxiosRequestConfig } from "axios";
-import { NextRequest } from "next/server";
-
-export async function POST(req: any, res: any) {
+export async function POST(req: any) {
   try {
     const { id } = await req.json();
     const { deletedProject, error } = await deleteProject(id);
@@ -16,7 +13,7 @@ export async function POST(req: any, res: any) {
     });
   }
 }
-export async function GET(req: any) {
+export async function GET() {
   try {
     const { projects, error } = await getProjects();
     if (error) throw new Error(`${error}`);
