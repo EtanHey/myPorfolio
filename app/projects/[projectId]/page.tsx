@@ -23,8 +23,6 @@ async function page({
   params: Promise<{ projectId: Project["id"] }>;
 }) {
   const { projectId } = await params;
-  console.log(projectId);
-
   const { project } = await getProjectById(projectId);
   if (!project) return <div>Project not found</div>;
   const { description, title, projectUrl, githubUrl } = project;

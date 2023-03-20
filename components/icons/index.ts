@@ -1,2 +1,4 @@
 import TrashIcon from "./TrashIcon";
-export { TrashIcon };
+import GitHubIcon from "./GitHubIcon";
+import GitHubWhiteIcon from "./GitHubWhiteIcon";
+export { TrashIcon, GitHubIcon, GitHubWhiteIcon };

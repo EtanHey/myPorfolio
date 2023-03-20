@@ -1,6 +1,3 @@
-import GoToPage from "@/components/actions/buttons/GoToPage";
-import GitHubIcon from "@/components/icons/GitHubIcon";
-import { getProjectById } from "@/lib/prisma";
 import { Project } from "@prisma/client";
 
 export const generateMetadata = async ({

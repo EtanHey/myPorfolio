@@ -1,10 +1,8 @@
 import DeleteProjectButton from "@/components/actions/buttons/DeleteProjectButton";
 import GoToPage from "@/components/actions/buttons/GoToPage";
-import { TrashIcon } from "@/components/icons";
 import GitHubIcon from "@/components/icons/GitHubIcon";
 import { getProjects } from "@/lib/prisma/projectsCont";
 import { Project } from "@prisma/client";
-import Link from "next/link";
 import React from "react";
 
 const Projects = async () => {

@@ -11,27 +11,29 @@ const ProjectsLinks = ({ projects }: { projects: Project[] | undefined }) => {
   return (
     <>
       {projects ? (
-        <li className="flex place-items-center">
+        <li className="flex flex-wrap place-items-center items-center justify-center gap-y-2">
           <Link href="/projects" className="py-1 text-sm font-medium uppercase">
-            Projects
+            Projects{pageName === "projects" ? <>:</> : null}
           </Link>
           {pageName === "projects" ? (
-            <ul className="flex flex-wrap  place-items-center gap-2 text-center">
-              :<span className="text-2xl">&#10098;</span>
-              {projects.map((project) => (
-                <Link
-                  className={`px-3 py-1 text-sm font-medium uppercase transition-all duration-300 ${
-                    project.id === pageId
-                      ? "rounded bg-white/20 drop-shadow-lg backdrop-blur-lg"
-                      : ""
-                  }`}
-                  key={project.id}
-                  href={`/projects/${project.id}`}
-                >
-                  {project.title}
-                </Link>
+            <ul className="flex place-items-center gap-y-2 text-center">
+              <span className="text-2xl sm:text-4xl">&#10098;</span>
+              {projects.map((project, index) => (
+                <span className="flex flex-wrap" key={project.id}>
+                  <Link
+                    className={`px-3 py-1 text-sm font-medium uppercase transition-all duration-300 ${
+                      project.id === pageId
+                        ? "rounded bg-white/20 drop-shadow-lg backdrop-blur-lg"
+                        : ""
+                    }`}
+                    href={`/projects/${project.id}`}
+                  >
+                    {project.title}
+                    {index !== projects.length - 1 && <>,</>}
+                  </Link>
+                </span>
               ))}
-              <span className="text-2xl">&#10099;</span>
+              <span className="text-2xl sm:text-4xl">&#10099; </span>
             </ul>
           ) : null}
         </li>
