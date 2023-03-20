@@ -11,7 +11,7 @@ const GoToPage = ({
   url: string;
 }) => {
   return (
-    <Link target={"/"} href={url}>
+    <Link  title={title} target={"/"} href={url}>
       {children ? children : title}
     </Link>
   );

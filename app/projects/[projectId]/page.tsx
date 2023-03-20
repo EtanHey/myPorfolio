@@ -1,5 +1,4 @@
-import GoToPage from "@/components/actions/buttons/GoToPage";
-import GitHubIcon from "@/components/icons/GitHubIcon";
+import { GoToPage, GitHubIcon } from "@/components";
 import { getProjectById } from "@/lib/prisma";
 import { Project } from "@prisma/client";
 import React from "react";
@@ -35,7 +34,7 @@ async function page({
               {title}
             </h1>
           </GoToPage>
-          <GoToPage title={title} url={githubUrl}>
+          <GoToPage title={`${title} Github repo`} url={githubUrl}>
             <GitHubIcon height={49} width={48} />
           </GoToPage>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 const GitHubIcon = ({ width, height }: { width: number; height: number }) => {
   return (
     <svg
-      className="transition-all duration-300 scale-100 hover:scale-105 hover:fill-violet-500/50"
+      className="scale-100 transition-all duration-300 hover:scale-105 hover:fill-violet-500/50"
       width={width}
       height={height}
       viewBox={`0 0 98 96`}

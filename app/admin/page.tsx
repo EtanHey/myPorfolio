@@ -1,6 +1,4 @@
-import { AddNewProjectButton } from "@/components/actions/forms";
-import InnerLayout from "@/components/layouts/InnerLayout";
-import SearchBar from "@/components/actions/forms/SearchBar";
+import { AddNewProjectButton, InnerLayout, SearchBar } from "@/components";
 import React from "react";
 import Projects from "./Projects";
 

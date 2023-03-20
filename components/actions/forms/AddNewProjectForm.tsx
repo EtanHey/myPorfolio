@@ -3,8 +3,8 @@ import { Project } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import React, { BaseSyntheticEvent, useContext } from "react";
-import { LabeledTextArea, LabeledTextInput } from ".";
 import { modalContext } from "../../providers/contexts";
+import { LabeledTextArea, LabeledTextInput } from "./inputs";
 
 const AddNewProjectForm = () => {
   const router = useRouter();
