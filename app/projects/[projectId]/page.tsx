@@ -1,3 +1,5 @@
+import GoToPage from "@/components/actions/buttons/GoToPage";
+import GitHubIcon from "@/components/icons/GitHubIcon";
 import { getProjectById } from "@/lib/prisma";
 import { Project } from "@prisma/client";
 import React from "react";
@@ -21,11 +23,26 @@ async function page({
   params: Promise<{ projectId: Project["id"] }>;
 }) {
   const { projectId } = await params;
+  console.log(projectId);
+
   const { project } = await getProjectById(projectId);
   if (!project) return <div>Project not found</div>;
-  const { projectUrl } = project;
+  const { description, title, projectUrl, githubUrl } = project;
   return (
-
+    <>
+      <header className="flex flex-col px-4 pt-2 sm:px-12 md:px-36 lg:px-48 xl:px-60">
+        <div className="flex items-center justify-between">
+          <GoToPage title={title} url={projectUrl}>
+            <h1 className="w-fit text-2xl font-semibold tracking-tight transition-colors duration-300 hover:text-violet-500/50">
+              {title}
+            </h1>
+          </GoToPage>
+          <GoToPage title={title} url={githubUrl}>
+            <GitHubIcon height={49} width={48} />
+          </GoToPage>
+        </div>
+        <p>{description}</p>
+      </header>
       <iframe
         src={projectUrl}
         width="100%"
@@ -35,7 +52,7 @@ async function page({
         allowFullScreen={true}
         className=""
       />
-
+    </>
   );
 }
 

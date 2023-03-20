@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const ProjectsLayout = async ({ children }: { children: React.ReactNode }) => {
-  return <InnerLayout>{children}</InnerLayout>;
+  return <>{children}</>;
 };
 
 export default ProjectsLayout;
