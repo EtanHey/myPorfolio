@@ -13,7 +13,7 @@ const ProjectsLinks = ({ projects }: { projects: Project[] | undefined }) => {
       {projects ? (
         <li className="flex flex-wrap place-items-center items-center justify-center gap-y-2">
           <Link href="/projects" className="py-1 text-sm font-medium uppercase">
-            Projects:
+            Projects{pageName === "projects" ? <>:</> : null}
           </Link>
           {pageName === "projects" ? (
             <ul className="flex place-items-center gap-y-2 text-center">
