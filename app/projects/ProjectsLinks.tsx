@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
+
 const ProjectsLinks = ({ projects }: { projects: Project[] | undefined }) => {
   const pathName = usePathname();
   const pageName = pathName.split("/")[1];

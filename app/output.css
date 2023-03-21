@@ -810,15 +810,6 @@ main {
   row-gap: 0.5rem;
 }
 
-.gap-y-2 {
-  row-gap: 0.5rem;
-}
-
-.gap-x-2 {
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-}
-
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -953,11 +944,6 @@ main {
   background-color: rgb(255 255 255 / 0.05);
 }
 
-.bg-\[\#6B329F\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 50 159 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
 }
@@ -1003,10 +989,6 @@ main {
 
 .to-purple-600 {
   --tw-gradient-to: #9333ea;
-}
-
-.to-\[\#6B329F\] {
-  --tw-gradient-to: #6B329F;
 }
 
 .p-0 {
@@ -1114,10 +1096,6 @@ main {
   font-weight: 600;
 }
 
-.font-black {
-  font-weight: 900;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -1148,20 +1126,6 @@ main {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#F0FFA3\] {
-  --tw-text-opacity: 1;
-  color: rgb(240 255 163 / var(--tw-text-opacity));
-}
-
-.text-\[\#\#FBFFE5\] {
-  color: ##FBFFE5;
-}
-
-.text-\[\#FBFFE5\] {
-  --tw-text-opacity: 1;
-  color: rgb(251 255 229 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -1229,18 +1193,6 @@ main {
   transition-duration: 700ms;
 }
 
-.duration-150 {
-  transition-duration: 150ms;
-}
-
-.duration-1000 {
-  transition-duration: 1000ms;
-}
-
-.duration-75 {
-  transition-duration: 75ms;
-}
-
 .ease-linear {
   transition-timing-function: linear;
 }
@@ -1285,46 +1237,16 @@ main {
   background-color: rgb(91 33 182 / var(--tw-bg-opacity));
 }
 
-
 .hover\:bg-white\/20:hover {
   background-color: rgb(255 255 255 / 0.2);
 }
 
 .hover\:fill-red-500:hover {
   fill: #ef4444;
-
 }
 
 .hover\:fill-violet-500\/50:hover {
   fill: rgb(139 92 246 / 0.5);
-}
-
-.hover\:fill-black:hover {
-  fill: #000;
-}
-
-.hover\:fill-violet-500\/5:hover {
-  fill: rgb(139 92 246 / 0.05);
-}
-
-.hover\:fill-red-500\/50:hover {
-  fill: rgb(239 68 68 / 0.5);
-}
-
-.hover\:fill-red-500:hover {
-  fill: #ef4444;
-}
-
-.hover\:fill-white\/50:hover {
-  fill: rgb(255 255 255 / 0.5);
-}
-
-.hover\:fill-white:hover {
-  fill: #fff;
-}
-
-.hover\:fill-violet-500:hover {
-  fill: #8b5cf6;
 }
 
 .hover\:text-violet-500\/50:hover {
@@ -1489,10 +1411,7 @@ main {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -1533,16 +1452,6 @@ main {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-
-  .md\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  .md\:px-12 {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -1574,16 +1483,6 @@ main {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
-
-  .lg\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
-
-  .lg\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -1595,31 +1494,6 @@ main {
   .xl\:px-60 {
     padding-left: 15rem;
     padding-right: 15rem;
-  }
-
-  .xl\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .xl\:px-48 {
-    padding-left: 12rem;
-    padding-right: 12rem;
-  }
-
-  .xl\:px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
-  .xl\:px-36 {
-    padding-left: 9rem;
-    padding-right: 9rem;
-  }
-
-  .xl\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
   }
 }
 

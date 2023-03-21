@@ -8,10 +8,10 @@ const GoToPage = ({
 }: {
   children?: ReactNode;
   title: string;
-  url: string;
+  url: any;
 }) => {
   return (
-    <Link  title={title} target={"/"} href={url}>
+    <Link title={title} target={"/"} href={url}>
       {children ? children : title}
     </Link>
   );
