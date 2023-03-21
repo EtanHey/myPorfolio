@@ -1,7 +1,5 @@
-import DeleteProjectButton from "@/components/actions/buttons/DeleteProjectButton";
-import GoToPage from "@/components/actions/buttons/GoToPage";
-import GitHubIcon from "@/components/icons/GitHubIcon";
-import { getProjects } from "@/lib/prisma/projectsCont";
+import { DeleteProjectButton, GoToPage, GitHubIcon } from "@/components";
+import { getProjects } from "@/lib/prisma";
 import { Project } from "@prisma/client";
 import React from "react";
 
@@ -17,7 +15,7 @@ const Projects = async () => {
             >
               <GoToPage title={project.title} url={project.projectUrl} />
               <GoToPage
-                title={`${project.title}'s github repo`}
+                title={`${project.title} Github repo`}
                 url={project.githubUrl}
               >
                 <GitHubIcon height={50} width={50} />

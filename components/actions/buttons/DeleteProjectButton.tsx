@@ -1,4 +1,5 @@
 "use client";
+import { TrashIcon } from "@/components/icons";
 import { Project } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -22,12 +23,14 @@ const DeleteProjectButton = ({ id }: { id: Project["id"] }) => {
   };
   return (
     <button
-      className="font-bold rounded-lg border-2 border-violet-500 bg-white/5 py-1 px-3 uppercase drop-shadow-lg backdrop-blur-lg transition-colors duration-300 ease-linear hover:bg-violet-500 hover:text-white"
+      title={"Delete Project"}
+      about={"Delete Project"}
+      className="rounded-lg border-2  border-violet-500 bg-white/5 py-1 px-3 font-bold uppercase drop-shadow-lg backdrop-blur-lg transition-colors duration-150 ease-linear hover:bg-white/20 hover:fill-red-500 hover:text-white"
       onClick={() => {
         handleDeleteProject();
       }}
     >
-      {loading ? "loading..." : "delete"}
+      {loading ? "loading..." : <TrashIcon width={22.5} height={25} />}
     </button>
   );
 };

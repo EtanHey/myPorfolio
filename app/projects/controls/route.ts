@@ -1,4 +1,4 @@
-import { addProject, getProjects } from "@/lib/prisma/projectsCont";
+import { addProject, getProjects } from "@/lib/prisma";
 export async function POST(req: any) {
   try {
     const { newProject } = await req.json();

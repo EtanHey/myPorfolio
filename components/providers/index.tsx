@@ -1,14 +1,8 @@
 "use client";
-
 import { User } from "@prisma/client";
-import React, {
-  createContext,
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  useState,
-} from "react";
+import React, { ReactNode, useState } from "react";
 import { userContext, modalContext } from "./contexts";
+
 
 const Providers = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User>({} as User);

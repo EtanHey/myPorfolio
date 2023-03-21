@@ -1,5 +1,10 @@
 import { PrismaClient } from "@prisma/client";
-import { addProject, getProjectById, getProjects } from "./projectsCont";
+import {
+  addProject,
+  getProjectById,
+  getProjects,
+  deleteProject,
+} from "./projectsCont";
 import {
   getReminders,
   createReminder,
@@ -23,5 +28,6 @@ export {
   getUserById,
   getUserByLoginInfo,
   getUsers,
+  deleteProject,
 };
 export default prisma;

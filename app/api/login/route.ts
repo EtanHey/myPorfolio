@@ -1,4 +1,4 @@
-import { getUserByLoginInfo } from "@/lib/prisma/usersCont";
+import { getUserByLoginInfo } from "@/lib/prisma";
 import { User } from "@prisma/client";
 
 export async function POST(req: any) {

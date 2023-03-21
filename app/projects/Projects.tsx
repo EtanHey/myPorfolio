@@ -1,6 +1,5 @@
-import SidebarContainer from "@/components/sidebar/SidebarContainer";
-import SidebarListContainer from "@/components/sidebar/SidebarListContainer";
-import { getProjects } from "@/lib/prisma/projectsCont";
+import { SidebarContainer, SidebarListContainer } from "@/components";
+import { getProjects } from "@/lib/prisma";
 import { Project } from "@prisma/client";
 import Link from "next/link";
 import React from "react";
@@ -12,10 +11,7 @@ export const Projects = async () => {
       <SidebarListContainer>
         {projects
           ? projects?.map((project: Project) => (
-              <li
-                className="max-h-fit"
-                key={project.id}
-              >
+              <li className="max-h-fit" key={project.id}>
                 <Link
                   className="relative  flex h-96 w-full items-center "
                   href={`/projects/${project.id}`}

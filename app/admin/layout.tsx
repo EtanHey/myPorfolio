@@ -1,5 +1,4 @@
-import AdminContainer from "@/components/providers/admin/Container";
-import InnerLayout from "@/components/layouts/InnerLayout";
+import {InnerLayout, AdminContainer} from "@/components";
 import { Metadata } from "next";
 import React from "react";
 
