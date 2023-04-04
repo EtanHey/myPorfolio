@@ -15,16 +15,12 @@ export const metadata = {
 
 export default async function RootLayout(any: any) {
   const { children } = any;
-  const { projects, error } = await getProjects();
-  if (error || !projects) {
-    return <div>No projects were found, {error}</div>;
-  }
   return (
     <html lang="en">
       <body className="scrollbar-none h-full max-h-screen overflow-hidden bg-black">
         <Providers>
           {/* <MouseOverlay> */}
-          <Header projects={projects} />
+          <Header />
           <LayoutWOSidebar> {children}</LayoutWOSidebar>
           <Modal />
           <Footer />
