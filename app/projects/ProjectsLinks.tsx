@@ -2,13 +2,16 @@
 import { Project } from "@prisma/client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
-
+import React, { useEffect } from "react";
 
 const ProjectsLinks = ({ projects }: { projects: Project[] | undefined }) => {
   const pathName = usePathname();
   const pageName = pathName.split("/")[1];
   const pageId = pathName.split("/")[2];
+  useEffect(() => {
+    console.log(pageName);
+    console.log(projects);
+  }, [projects, pageName]);
   return projects ? (
     <ul className="flex flex-wrap place-items-center items-center justify-center gap-y-2">
       <li>
