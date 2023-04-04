@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import ProjectsLinks from "./projects/ProjectsLinks";
-
-function Header() {
+function Header({ProjectsLinks}:{ProjectsLinks:any}) {
   return (
     <header className="flex h-fit w-full flex-row items-center bg-[#6B329F] px-3 py-4 font-bold text-white">
       <nav className="center">
@@ -13,7 +11,7 @@ function Header() {
             </Link>
           </li>
           <li>
-            <ProjectsLinks />
+          <ProjectsLinks />
           </li>
         </ul>
       </nav>
