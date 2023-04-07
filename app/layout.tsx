@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { Analytics } from "@vercel/analytics/react";
 import "./output.css";
+
 import ProjectsLinks from "./projects/ProjectsLinks";
 export const metadata = {
   title: "Etan Heyman`n Portfolio",

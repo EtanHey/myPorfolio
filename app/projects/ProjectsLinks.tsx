@@ -2,7 +2,6 @@ import { getProjects } from "@/lib/prisma";
 import Link from "next/link";
 import React from "react";
 import Links from "./Links";
-
 const ProjectsLinks = async () => {
   const { projects, error } = await getProjects();
   if (error || !projects) {
