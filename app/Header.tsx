@@ -1,9 +1,6 @@
-import { Project } from "@prisma/client";
 import Link from "next/link";
 import React from "react";
-import ProjectsLinks from "./projects/ProjectsLinks";
-
-function Header({ projects }: { projects: Project[] }) {
+function Header({ProjectsLinks}:{ProjectsLinks:any}) {
   return (
     <header className="flex h-fit w-full flex-row items-center bg-[#6B329F] px-3 py-4 font-bold text-white">
       <nav className="center">
@@ -14,7 +11,7 @@ function Header({ projects }: { projects: Project[] }) {
             </Link>
           </li>
           <li>
-            <ProjectsLinks projects={projects} />
+          <ProjectsLinks />
           </li>
         </ul>
       </nav>
