@@ -9,7 +9,9 @@ export const generateMetadata = async ({
   params: Promise<{ projectId: Project["id"] }>;
 }) => {
   const { projectId } = await params;
+
   const { project } = await getProjectById(projectId);
+
   if (!project) {
     return { title: "Error - Project not found" };
   }
@@ -25,6 +27,7 @@ async function page({
   const { project } = await getProjectById(projectId);
   if (!project) return <div>Project not found</div>;
   const { description, title, projectUrl, githubUrl } = project;
+
   return (
     <>
       <header className="flex flex-col px-4 pt-2 sm:px-12 md:px-36 lg:px-48 xl:px-60">
