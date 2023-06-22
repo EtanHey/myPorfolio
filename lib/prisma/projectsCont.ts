@@ -1,4 +1,5 @@
 import { Project } from "@prisma/client";
+import localProjects from "./built_in_projects.json";
 import prisma from ".";
 
 export async function getProjects(): Promise<{
@@ -28,9 +29,17 @@ export async function getProjectById(
   id: Project["id"]
 ): Promise<{ project?: Project; error?: any }> {
   try {
-    const project = await prisma.project.findFirstOrThrow({
+    const localProject = localProjects.find(
+      (localProject) => id === localProject.id
+    );
+    if (localProject) return { project: localProject };
+    
+    const project = await prisma.project.findUnique({
       where: { id },
     });
+
+    if (project === null) throw new Error("Project not found");
+    console.log(project);
     return { project };
   } catch (error: any) {
     return { error };

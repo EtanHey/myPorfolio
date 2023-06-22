@@ -15,6 +15,18 @@ const Links = ({ projects }: { projects: Project[] | undefined }) => {
         <li className="flex place-items-center gap-y-2 text-center">
           <span className="text-2xl sm:text-4xl">&#10098;</span>
           <ul className="flex">
+          <li className="flex flex-wrap" key="cameraAnimation">
+              <Link
+                className={`px-3 py-1 text-sm  uppercase transition-all duration-300 ${
+                  "cameraAnimation" === pageId
+                    ? "rounded bg-white/20 drop-shadow-lg backdrop-blur-lg"
+                    : ""
+                }`}
+                href="/projects/cameraAnimation"
+              >
+                Camera Animation,
+              </Link>
+            </li>
             {projects.map((project, index) => (
               <li className="flex flex-wrap" key={project.id}>
                 <Link
