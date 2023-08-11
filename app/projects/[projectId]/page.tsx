@@ -9,13 +9,12 @@ export const generateMetadata = async ({
   params: Promise<{ projectId: Project["id"] }>;
 }) => {
   const { projectId } = await params;
-
   const { project } = await getProjectById(projectId);
-
   if (!project) {
     return { title: "Error - Project not found" };
   }
-  return { title: project.title };
+  const { title } = project;
+  return { title: `${title}'s page`, description: `${title}'s page` };
 };
 
 async function page({
